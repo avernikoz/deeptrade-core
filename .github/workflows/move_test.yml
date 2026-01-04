@@ -8,6 +8,9 @@ on:
   push:
     branches:
       - main
+    paths:
+      - ".github/workflows/move_test.yml"
+      - "packages/deeptrade-core/**.move"
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
